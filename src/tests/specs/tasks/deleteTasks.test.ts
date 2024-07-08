@@ -1,5 +1,5 @@
 import { beforeEach, describe, it, expect } from "vitest";
-import { prisma } from "../../../database/prisma";
+import { prisma } from "../../../database/rotas.prisma";
 import { request } from "../../setupFiles";
 
 describe("delete task", () => {

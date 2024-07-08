@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { prisma } from "../../../database/prisma";
+import { prisma } from "../../../database/rotas.prisma";
 import { request } from "../../setupFiles";
 import { Prisma, Category, Task } from "@prisma/client";
 
