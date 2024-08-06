@@ -7,3 +7,5 @@ app.use(helmet());
 app.use(json());
 
 app.post("/categories", Controllers.postagem)
+
+app.post("/users/login")

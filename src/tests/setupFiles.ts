@@ -1,12 +1,13 @@
 import supertest from "supertest";
 import { beforeEach } from "vitest";
 import { app } from "../app";
-import { prisma } from "../database/rotas.prisma";
+import { prisma } from "../database/prisma";
 
 export const request = supertest(app);
 
 beforeEach(async () => {
   await prisma.$transaction([
+    prisma.user.deleteMany(),
     prisma.category.deleteMany(),
     prisma.task.deleteMany(),
   ]);
